@@ -237,7 +237,11 @@ The project includes comprehensive visualizations:
 
 Waveform plots for each emotion
 
+![waveplot](waveplot.png)
+
 Spectrograms showing frequency content
+
+![spectrogram](spectrogram.png)
 
 Confusion matrices for model evaluation
 
@@ -259,7 +263,7 @@ Hardware Requirements: Standard CPU sufficient for training
 ## 📚 References
 RAVDESS Dataset: Livingstone SR, Russo FA (2018) The Ryerson Audio-Visual Database of Emotional Speech and Song (RAVDESS): A dynamic, multimodal set of facial and vocal expressions in North American English. PLoS ONE 13(5): e0196391.
 
-![Model Architecture](model_architecture.png)
+
 
 
 
