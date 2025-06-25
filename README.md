@@ -214,6 +214,8 @@ The project implements and compares 5 different machine learning and deep learni
 Best Model Performance (MLP):
 Overall Accuracy: 76%
 
+![model_performance](model_performance.jpg)
+
 Best Performing Emotions: Angry (91% precision), Calm (90% precision)
 
 Challenging Emotions: Disgust, Surprise (lower precision)
