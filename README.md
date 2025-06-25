@@ -119,40 +119,40 @@ Feature Extraction Function
 
 
 
-def features_extract(file_path):
-
-    y, sr = librosa.load(file_path)
+    def features_extract(file_path):
     
-    result = np.array([])
-    
-    # MFCC
-    mfcc = np.mean(librosa.feature.mfcc(y=y, sr=sr, n_mfcc=40).T, axis=0)
-    result = np.hstack((result, mfcc))
-    
-    # Zero Crossing Rate
-    zcr = np.mean(librosa.feature.zero_crossing_rate(y=y).T, axis=0)
-    result = np.hstack((result, zcr))
-    
-    # Mel Spectrogram
-    mel = np.mean(librosa.feature.melspectrogram(y=y, sr=sr).T, axis=0)
-    result = np.hstack((result, mel))
-    
-    # Chroma STFT
-    chroma_stft = np.mean(librosa.feature.chroma_stft(y=y, sr=sr).T, axis=0)
-    result = np.hstack((result, chroma_stft))
-    
-    # Spectral Centroid
-    speCen = np.mean(librosa.feature.spectral_centroid(y=y, sr=sr)[0])
-    result = np.hstack((result, speCen))
-    
-    # Spectral Rolloff
-    specRollOff = np.mean(librosa.feature.spectral_rolloff(y=y, sr=sr))
-    result = np.hstack((result, specRollOff))
-    
-    return result.tolist()
+        y, sr = librosa.load(file_path)
+        
+        result = np.array([])
+        
+        # MFCC
+        mfcc = np.mean(librosa.feature.mfcc(y=y, sr=sr, n_mfcc=40).T, axis=0)
+        result = np.hstack((result, mfcc))
+        
+        # Zero Crossing Rate
+        zcr = np.mean(librosa.feature.zero_crossing_rate(y=y).T, axis=0)
+        result = np.hstack((result, zcr))
+        
+        # Mel Spectrogram
+        mel = np.mean(librosa.feature.melspectrogram(y=y, sr=sr).T, axis=0)
+        result = np.hstack((result, mel))
+        
+        # Chroma STFT
+        chroma_stft = np.mean(librosa.feature.chroma_stft(y=y, sr=sr).T, axis=0)
+        result = np.hstack((result, chroma_stft))
+        
+        # Spectral Centroid
+        speCen = np.mean(librosa.feature.spectral_centroid(y=y, sr=sr)[0])
+        result = np.hstack((result, speCen))
+        
+        # Spectral Rolloff
+        specRollOff = np.mean(librosa.feature.spectral_rolloff(y=y, sr=sr))
+        result = np.hstack((result, specRollOff))
+        
+        return result.tolist()
     
 ## 🤖 Machine Learning Models
-The project implements and compares 5 different machine learning algorithms:
+The project implements and compares 5 different machine learning and deep learning algorithms:
 
 ### 1. Random Forest Classifier
       Accuracy: 65%
@@ -271,6 +271,4 @@ RAVDESS Dataset: Livingstone SR, Russo FA (2018) The Ryerson Audio-Visual Databa
 🙏 Acknowledgments
 RAVDESS Dataset creators for providing high-quality emotional speech data
 
-Librosa development team for excellent audio processing tools
 
-Scikit-learn and TensorFlow communities for machine learning frameworks
